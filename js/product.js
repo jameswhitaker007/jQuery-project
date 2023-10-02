@@ -1,7 +1,8 @@
 $(document).ready(function () {
   var token = localStorage.getItem("token");
   if (token == undefined || token == "") {
-    window.location.replace("../index.html");
+    //window.location.replace("../index.html");
+    window.location.replace(window.location.origin + '/index.html');
   }
 
   $("#user").text("Hi,\n" + localStorage.getItem("name"));
