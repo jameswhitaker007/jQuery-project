@@ -1,3 +1,5 @@
+const alertPlaceholder = $("#alert-placeholder");
+
 $("document").ready(function () {
   $("#form")[0].addEventListener("submit", function (event) {
     event.preventDefault();
@@ -13,6 +15,8 @@ $("document").ready(function () {
       password: $("#password").val(),
     })
       .done(function (data) {
+        alertPlaceholder.empty();
+        alert("Authentication successful", "alert-success");
         localStorage.setItem("token", data.token);
         localStorage.setItem("name", data.firstName + " " + data.lastName);
         console.log(data);
@@ -22,7 +26,21 @@ $("document").ready(function () {
       })
       .fail(function (error) {
         console.error(error.responseJSON.message);
+        alertPlaceholder.empty();
+        alert("Authentication failed", "alert-warning");
       });
     $(".wrapper").hide();
   });
 });
+
+function alert(message, type) {
+  const wrapper = document.createElement("div");
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    "</div>",
+  ].join("");
+
+  alertPlaceholder.append(wrapper);
+}
