@@ -16,7 +16,7 @@ $("document").ready(function () {
     })
       .done(function (data) {
         alertPlaceholder.empty();
-        alert("Authentication successful", "alert-success");
+        alert("Authentication successful", "success");
         localStorage.setItem("token", data.token);
         localStorage.setItem("name", data.firstName + " " + data.lastName);
         console.log(data);
@@ -27,7 +27,7 @@ $("document").ready(function () {
       .fail(function (error) {
         console.error(error.responseJSON.message);
         alertPlaceholder.empty();
-        alert("Authentication failed", "alert-warning");
+        alert("Authentication failed", "warning");
       });
     $(".wrapper").hide();
   });
