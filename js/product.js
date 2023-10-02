@@ -2,7 +2,7 @@ $(document).ready(function () {
   var token = localStorage.getItem("token");
   if (token == undefined || token == "") {
     //window.location.replace("../index.html");
-    window.location.replace(window.location.origin + '/index.html');
+    window.location.replace(window.location.origin + '/jquary-project/index.html');
   }
 
   $("#user").text("Hi,\n" + localStorage.getItem("name"));
@@ -26,7 +26,8 @@ $(document).ready(function () {
       if (error.status === 403) {
         var messageObj = JSON.parse(error.responseText);
         alert(messageObj.message);
-        window.location.replace("../index.html");
+        //window.location.replace("../index.html");
+        window.location.replace(window.location.origin + '/jquary-project/index.html');
       }
       $(".wrapper").hide();
     },
@@ -94,5 +95,5 @@ function logout() {
   localStorage.removeItem("token");
   localStorage.removeItem("name");
   //window.location.replace("../index.html");
-  window.location.replace(window.location.origin + '/index.html');
+  window.location.replace(window.location.origin + '/jquary-project/index.html');
 }

@@ -18,7 +18,7 @@ $("document").ready(function () {
         console.log(data);
         //window.location.replace("./sub_pages/product.html");
         window.location.replace(
-          window.location.origin + "sub_pages/product.html"
+          window.location.origin + "/jquary-project/sub_pages/product.html"
         );
       })
       .fail(function (error) {
