@@ -68,29 +68,6 @@ function appendProductCards(products) {
   });
 }
 
-/*function addStars(stars) {
-  var wholeStars = Math.floor(stars);
-  var decimalValue = stars.toString().indexOf(".");
-  var value = stars.toString().substring(decimalValue + 1);
-  var halfStar = value >= 50 ? 1 : 0;
-  var emptyStars = Math.floor(5 - wholeStars - halfStar);
-  var result = "";
-  if (wholeStars > 0) {
-    for (i = 0; i < wholeStars; i++) {
-      result += '<i class="fa-solid fa-star"></i>';
-    }
-  }
-  if (halfStar == 1) {
-    result += '<i class="fa-solid fa-star-half-stroke"></i>';
-  }
-  if (emptyStars > 0) {
-    for (j = 0; j < emptyStars; j++) {
-      result += '<i class="fa-regular fa-star"></i>';
-    }
-  }
-  return result;
-}*/
-
 function addStars(stars) {
   var fullStars = Math.floor(stars);
   var decimalValue = stars.toString().indexOf(".");
@@ -116,5 +93,6 @@ function addStars(stars) {
 function logout() {
   localStorage.removeItem("token");
   localStorage.removeItem("name");
-  window.location.replace("../index.html");
+  //window.location.replace("../index.html");
+  window.location.replace(window.location.origin + '/index.html');
 }
