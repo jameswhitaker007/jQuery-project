@@ -1,1 +1,1 @@
-# jquary-project
+# jquery-project
