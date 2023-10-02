@@ -27,7 +27,7 @@ $("document").ready(function () {
       .fail(function (error) {
         console.error(error.responseJSON.message);
         alertPlaceholder.empty();
-        alert("Authentication failed", "warning");
+        alert("Authentication failed", "danger");
       });
     $(".wrapper").hide();
   });
