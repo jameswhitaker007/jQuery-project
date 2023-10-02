@@ -16,9 +16,8 @@ $("document").ready(function () {
         localStorage.setItem("token", data.token);
         localStorage.setItem("name", data.firstName + " " + data.lastName);
         console.log(data);
-        //window.location.replace("./sub_pages/product.html");
         window.location.replace(
-          window.location.origin + "/jquary-project/sub_pages/product.html"
+          window.location.origin + "/jQuery-project/sub_pages/product.html"
         );
       })
       .fail(function (error) {

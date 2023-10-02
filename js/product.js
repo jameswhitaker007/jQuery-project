@@ -1,8 +1,7 @@
 $(document).ready(function () {
   var token = localStorage.getItem("token");
   if (token == undefined || token == "") {
-    //window.location.replace("../index.html");
-    window.location.replace(window.location.origin + '/jquary-project/index.html');
+    window.location.replace(window.location.origin + '/jQuery-project/index.html');
   }
 
   $("#user").text("Hi,\n" + localStorage.getItem("name"));
@@ -12,12 +11,10 @@ $(document).ready(function () {
     url: "https://dummyjson.com/auth/products",
     headers: {
       Authorization: `Bearer ${token}`,
-      //Authorization: "Bearer " + token,
       "Content-Type": "application/json",
     },
     success: function (data) {
       console.log(data);
-      //$("#product").text(JSON.stringify(data.products));
       appendProductCards(data.products);
       $(".wrapper").hide();
     },
@@ -26,8 +23,7 @@ $(document).ready(function () {
       if (error.status === 403) {
         var messageObj = JSON.parse(error.responseText);
         alert(messageObj.message);
-        //window.location.replace("../index.html");
-        window.location.replace(window.location.origin + '/jquary-project/index.html');
+        window.location.replace(window.location.origin + '/jQuery-project/index.html');
       }
       $(".wrapper").hide();
     },
@@ -94,6 +90,5 @@ function addStars(stars) {
 function logout() {
   localStorage.removeItem("token");
   localStorage.removeItem("name");
-  //window.location.replace("../index.html");
-  window.location.replace(window.location.origin + '/jquary-project/index.html');
+  window.location.replace(window.location.origin + '/jQuery-project/index.html');
 }
