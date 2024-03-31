@@ -54,3 +54,7 @@ Contributions are welcome. Please open an issue or submit a pull request with yo
 ## License
 
 This project is open-sourced under the MIT License. See the LICENSE file for more details.
+
+![Screenshot 2024-03-31 141719](https://github.com/jameswhitaker007/jQuery-project/assets/138829204/f7b8ea70-d86e-4795-88ae-b62a38696b95)
+
+![Screenshot 2024-03-31 141903](https://github.com/jameswhitaker007/jQuery-project/assets/138829204/8d736cc7-f7a3-433b-a663-fdf66a0d7434)
